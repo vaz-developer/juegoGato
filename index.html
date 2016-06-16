@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tic tac toe</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/buttons.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body onload="starGame();">
+		<div class="container">
+			<h1><center>Tic Tac Toe</center></h1>
+			<a href="javascript:starGame();" class="button button-3d-highlight button-circle">Juego Nuevo</a>
+			<div class="tablero"><!--TABLERO-->
+				<div class="row"><!--PRIMERA FILA-->
+					<div class="col-md-4">
+						<div id="caja1" class="tama-cajas caja1-4-izq margen-dere margen-abajo">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja2" class="tama-cajas caja2-centro margen-abajo">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja3" class="tama-cajas caja3-der margen-abajo margen-izq">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+				</div>
+				<div class="row"><!--SEGUNDA FILA-->
+					<div class="col-md-4">
+						<div id="caja4" class="tama-cajas caja1-4-izq arriba margen-dere margen-abajo">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja5" class="tama-cajas caja5-8-centro arriba margen-abajo">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja6" class="tama-cajas caja6-9-der arriba margen-abajo margen-izq">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+				</div>
+				<div class="row"><!--TERCERA FILA-->
+					<div class="col-md-4">
+						<div id="caja7" class="tama-cajas caja1-4-izq arriba2 margen-dere">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja8" class="tama-cajas caja5-8-centro">
+							<h2 class="top-h2-8" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="caja9" class="tama-cajas caja6-9-der arriba2 margen-izq">
+							<h2 class="top-h2" onclick="nextMove(this);"></h2>
+						</div>
+					</div>
+				</div>
+			</div><!--FIN DEL TABLERO-->
+			<div class="row"><!--MARCADOR-->
+				<div class="col-md-6">
+						<h3 id="mensaje">El mensaje va aqui</h3>
+				</div>
+			</div>
+		</div>
+
+    	<!--SCRIPTS-->
+    	<script src="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+    </body>
+</html>

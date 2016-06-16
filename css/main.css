@@ -1,0 +1,57 @@
+/*PROPIEDADES GENERALES EN CAJAS*/
+.tablero {
+	margin-top: 2%;
+	margin-left: 38%;
+	margin-bottom: 2%;
+}
+.tama-cajas {
+	width: 50%;
+	height: 103px;
+	text-align: center;
+}
+/*POSICIONES DE CAJAS*/
+.caja1-4-izq {
+	margin-left: -16%;
+}
+.caja2-centro {
+	margin-left: -80%;
+}
+.caja3-der {
+	margin-left: -144%;
+}
+.caja5-8-centro {
+	margin-left: -80%;
+}
+.caja6-9-der {
+	margin-left: -144%;
+}
+.arriba {
+	margin-top: -10%;
+}
+.arriba2 {
+	margin-top: -9%;
+}
+.top-h2 {
+	padding: 36%;
+}
+.top-h2-8 {
+	padding: 18%;
+}
+
+/*BORDES DE CAJAS*/
+/*Cajas 1-4-7*/
+.margen-dere{
+	border-right: 3px solid black;
+}
+/*Todas las cajas*/
+.margen-abajo {
+	border-bottom: 3px solid black;
+}
+/*Cajas 3-6-9*/
+.margen-izq {
+	border-left: 3px solid black;
+}
+/*BOTON*/
+.button-circle {
+	border-radius: 53%;
+}
