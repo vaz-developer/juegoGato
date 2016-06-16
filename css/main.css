@@ -1,6 +1,6 @@
 /*PROPIEDADES GENERALES EN CAJAS*/
 .tablero {
-	margin-top: 2%;
+	margin-top: 7%;
 	margin-left: 38%;
 	margin-bottom: 2%;
 }
@@ -54,4 +54,12 @@
 /*BOTON*/
 .button-circle {
 	border-radius: 53%;
+}
+.letras-juego {
+	margin-top: 33%;
+	font-weight: 700;
+}
+/*MARCADOR*/
+.posi-marcador {
+	margin-top: -72%;
 }

@@ -92,7 +92,9 @@
   text-shadow: 0 1px 1px white;
   margin: 3px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  margin-top: 3%; 
+  margin-left: 43%;}
   /* line 44, ../scss/partials/_buttons.scss */
   .button:hover, .button:focus, .button:active, .button.is-active, .button.active {
     text-decoration: none; }

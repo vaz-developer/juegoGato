@@ -1,44 +1,48 @@
-function starGame() {
+function clearTablero() {
 	for (var i = 1; i <= 9; i = i +1){
-		clearBox(i); //Tambien aqui radica un problema porque no limpia mi caja
-		 $(".tablero").val(""); //Para que input se muestre limpio
+		limpiarCaja(i);
 	}
 
+}
+
+function starGame() {
+
+	clearTablero();
 
 	document.turn = "X";
 	if (Math.random() < 0.5) {
 		document.turn = "O";
 	}
 	document.winner = null;
-	setMessage ("Jugador con " + document.turn + " empieza");
+	setMessage("Jugador 1 empieza jugando con " + document.turn);
 }
 
 function setMessage(msg){
 	document.getElementById("mensaje").innerText = msg;
 }
-//Aqui radica un problema pero no logro deterctarlo en !=null que hace que no me marque ganaste el juego
+
 function nextMove(square) {
 	if (document.winner != null) {
-		setMessage(document.winner +"¡GANASTE EL JUEGO!");
+		setMessage("Aprieta el botón NARANJA para una nueva partida");
 	} else if (square.innerText == "") {
 		square.innerText = document.turn;
 		switchTurn();
-} else {
-	setMessage("Esta listo para usarse");
-	 }
+	} else {
+		setMessage("¡GATO!");
+	}
 
 }
 
 function switchTurn() {
 	if (checkForWinner(document.turn)) {
-		setMessage("¡FELICIDADES! " + document.turn + " Has ganado");
+		setMessage("¡FELICIDADES! Jugador con " + document.turn + " has ganado");
 		document.winner = document.turn;
 	} else if (document.turn == "X") {
 		document.turn = "O";
-		setMessage("Es turno del que tiene " + document.turn + " para tirar");
+		setMessage("Jugador 1 tira con " + document.turn);
 	} else {
 		document.turn = "X";
-		setMessage("Es turno del que tiene " + document.turn + " para tirar");
+		setMessage("Jugador 2 tira con " + document.turn);
 	}
 }
 
@@ -55,8 +59,10 @@ function checkForWinner(move) {
 
 			result = true;
 		}
-		return result;
-	}
+
+	console.log('Check for winner ' + move + ' ' + result);
+	return result;
+}
 
 function checkRow(a, b, c, move) {
 	var result = false;
@@ -67,14 +73,10 @@ function checkRow(a, b, c, move) {
 }
 
 function getBox(number) {
-	console.log(number);
-	return document.getElementById("caja" + number).innerText;
+	var temp = document.getElementById("caja" + number).innerText;
+	return temp.trim();
 }
 
-function clearBox(number) {
-	document.getElementById("caja" + number),innerText = "";
+function limpiarCaja(number) {
+	document.getElementById("boton" + number).innerText = '';
 }
-
-
-
-
